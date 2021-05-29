@@ -24,19 +24,4 @@ public class Main implements ModInitializer {
     public static Identifier identifier(String id) {
         return new Identifier(MOD_ID, id);
     }
-
-    public static void translateToFace(MatrixStack matrixStack, PlayerEntityModel<AbstractClientPlayerEntity> model, AbstractClientPlayerEntity player, float headYaw, float headPitch) {
-        if (player.isInSwimmingPose() || player.isFallFlying()) {
-            matrixStack.multiply(Vector3f.POSITIVE_Z.getDegreesQuaternion(model.head.roll));
-            matrixStack.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(headYaw));
-            matrixStack.multiply(Vector3f.POSITIVE_X.getDegreesQuaternion(-45.0F));
-        } else {
-            if (player.isInSneakingPose() && !model.riding) {
-                matrixStack.translate(0.0F, 0.25F, 0.0F);
-            }
-            matrixStack.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(headYaw));
-            matrixStack.multiply(Vector3f.POSITIVE_X.getDegreesQuaternion(headPitch));
-        }
-        matrixStack.translate(0.0F, -0.25F, -0.3F);
-    }
 }

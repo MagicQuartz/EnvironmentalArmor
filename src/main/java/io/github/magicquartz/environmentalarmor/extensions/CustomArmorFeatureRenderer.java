@@ -1,6 +1,7 @@
 package io.github.magicquartz.environmentalarmor.extensions;
 
-import io.github.magicquartz.environmentalarmor.models.GlassesModel;
+import io.github.magicquartz.environmentalarmor.model.GlassesModel;
+import io.github.magicquartz.environmentalarmor.model.waterGlassBowlModel;
 import io.github.magicquartz.environmentalarmor.registry.ModArmor;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -21,8 +22,10 @@ import net.minecraft.util.Identifier;
 @Environment(EnvType.CLIENT)
 public class CustomArmorFeatureRenderer<T extends LivingEntity, M extends EntityModel<T>> extends FeatureRenderer<T, M> {
     private static final Identifier GLASSES_TEXTURE = new Identifier("textures/armor/glasses.png");
+    private static final Identifier WATER_GLASS_BOWL_TEXTURE = new Identifier("textures/armor/water_glass_bowl.png");
 
     private final GlassesModel<T> glassesHelmet = new GlassesModel<>();
+    private final waterGlassBowlModel<T> waterGlassBowl = new waterGlassBowlModel<>();
 
     public CustomArmorFeatureRenderer(FeatureRendererContext<T, M> featureRendererContext) {
         super(featureRendererContext);
@@ -42,6 +45,18 @@ public class CustomArmorFeatureRenderer<T extends LivingEntity, M extends Entity
                         false, headItem.hasGlint()
                 );
                 this.glassesHelmet.render(matrixStack, vertexConsumer, i, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+                matrixStack.pop();
+            } else if (headItem.getItem() == ModArmor.WATER_GLASS_BOWL) {
+                matrixStack.push();
+                matrixStack.translate(0.0D, 0.0D, 0.0D);
+                this.getContextModel().copyStateTo(this.waterGlassBowl);
+                this.waterGlassBowl.setAngles(livingEntity, f, g, j, k, l);
+                VertexConsumer vertexConsumer = ItemRenderer.getArmorGlintConsumer(
+                        vertexConsumerProvider,
+                        RenderLayer.getArmorCutoutNoCull(WATER_GLASS_BOWL_TEXTURE),
+                        false, headItem.hasGlint()
+                );
+                this.waterGlassBowl.render(matrixStack, vertexConsumer, i, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
                 matrixStack.pop();
             }
         }

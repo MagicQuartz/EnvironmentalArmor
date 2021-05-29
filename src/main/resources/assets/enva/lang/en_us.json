@@ -26,6 +26,7 @@
   "item.enva.titanium_coated_water_glass_bowl": "Titanium Coated Water Glass Bowl",
   "item.enva.titanium_coated_glass_helmet": "Titanium Coated Glass Helmet",
   "item.enva.titanium_coated_glasses": "Titanium Coated Ender Glasses",
+  "block.enva.air_filter": "Air Filter",
 
   "death.attack.natural_causes": "%1$s died out of natural causes.",
   "death.attack.natural_causes.player": "%1$s died out of natural causes while fighting %2$s."

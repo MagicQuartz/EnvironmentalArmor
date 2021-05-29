@@ -8,8 +8,7 @@
     "PlayerEntityMixin",
     "BrewingRecipeRegistryMixin",
     "BrewingRecipeRegistryAccessor",
-    "FirstApril",
-    "PlayerEntityRendererMixin"
+    "FirstApril"
   ],
   "client": [
   ],

@@ -1,4 +1,4 @@
-package io.github.magicquartz.environmentalarmor.extensions;
+package io.github.magicquartz.environmentalarmor.item;
 
 import io.github.magicquartz.environmentalarmor.registry.ModArmor;
 import io.github.magicquartz.environmentalarmor.registry.ModEffects;

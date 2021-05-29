@@ -1,9 +1,9 @@
 package io.github.magicquartz.environmentalarmor.registry;
 
-import io.github.magicquartz.environmentalarmor.extensions.GlassBowlItem;
+import io.github.magicquartz.environmentalarmor.item.GlassBowlItem;
 import io.github.magicquartz.environmentalarmor.Main;
-import io.github.magicquartz.environmentalarmor.extensions.SunscreenItem;
-import io.github.magicquartz.environmentalarmor.extensions.TitaniumCoatedGlassBowlItem;
+import io.github.magicquartz.environmentalarmor.item.SunscreenItem;
+import io.github.magicquartz.environmentalarmor.item.TitaniumCoatedGlassBowlItem;
 import io.github.magicquartz.environmentalarmor.toolmaterials.TitaniumToolMaterial;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;

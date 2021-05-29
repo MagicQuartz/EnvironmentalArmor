@@ -2,6 +2,7 @@ package io.github.magicquartz.environmentalarmor.registry;
 
 import io.github.magicquartz.environmentalarmor.armor.*;
 import io.github.magicquartz.environmentalarmor.Main;
+import io.github.magicquartz.environmentalarmor.item.WaterGlassBowlItem;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -11,7 +12,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModArmor {
     public static final Item GLASS_HELMET = new ArmorItem(new GlassArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
-    public static final Item WATER_GLASS_BOWL = new ArmorItem(new WaterGlassArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings());
+    public static final WaterGlassBowlItem WATER_GLASS_BOWL = new WaterGlassBowlItem(new Item.Settings()); //new ArmorItem(new WaterGlassArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings());
     public static final Item GLASSES = new ArmorItem(new GlassesArmorMaterial(), EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.TOOLS).rarity(Rarity.COMMON));
 
     //Titanium Coated

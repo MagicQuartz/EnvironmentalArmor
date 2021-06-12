@@ -1,0 +1,27 @@
+{
+  "item.enva.glass_bowl": "Cam Kase",
+  "item.enva.water_glass_bowl": "Su Dolu Cam Kase",
+  "item.enva.glass_helmet": "Cam Kask",
+  "item.minecraft.potion.effect.water_resistance_short": "Su Direnci İksiri",
+  "item.minecraft.potion.effect.water_resistance_long": "Su Direnci İksiri",
+  "item.minecraft.splash_potion.effect.water_resistance_short": "Patlayıcı Su Direnci İksiri",
+  "item.minecraft.splash_potion.effect.water_resistance_long": "Patlayıcı Su Direnci İksiri",
+  "item.minecraft.lingering_potion.effect.water_resistance_short": "Kalıcı Su Direnci İksiri",
+  "item.minecraft.lingering_potion.effect.water_resistance_long": "Kalıcı Su Direnci İksiri",
+  "item.minecraft.tipped_arrow.effect.water_resistance_short": "Su Direnci Oku",
+  "item.minecraft.tipped_arrow.effect.water_resistance_long": "Su Direnci Oku",
+  "effect.enva.water_resistance": "Su Direnci",
+  "effect.enva.sunscreen": "Güneş Kremi",
+  "item.enva.magnesium_helmet": "Magnezyum Kask",
+  "item.enva.magnesium_chestplate": "Magnezyum Göğüslük",
+  "item.enva.magnesium_leggings": "Magnezyum Pantolon",
+  "item.enva.magnesium_boots": "Magnezyum Bot",
+  "item.enva.magnesium_ingot": "Magnezyum Külçesi",
+  "item.enva.magnesium_dust": "Magnezyum Tozu",
+  "item.enva.sunscreen": "Güneş Kremi",
+  "block.enva.magnesium_ore": "Magnezyum Cevheri",
+  "block.enva.magnesium_block": "Magnezyum Bloğu",
+
+  "death.attack.natural_causes": "%1$s doğal sebepler nedeniyle öldü.",
+  "death.attack.natural_causes.player": "%1$s, %2$s ile şavaşırken doğal sebebler nedeniyle öldü."
+}

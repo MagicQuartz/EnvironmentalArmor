@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#K#",
+    "SGS",
+    "#K#"
+  ],
+  "key": {
+    "#": {
+      "item": "enva:titanium_dust"
+    },
+    "K": {
+      "item": "minecraft:kelp"
+    },
+    "S": {
+      "item": "minecraft:seagrass"
+    },
+    "G": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "enva:sunscreen",
+    "count": 1
+  }
+}

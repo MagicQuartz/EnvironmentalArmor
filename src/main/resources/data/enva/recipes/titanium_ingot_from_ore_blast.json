@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "enva:titanium_ore"
+  },
+  "result": "enva:titanium_ingot",
+  "experience": 0.3,
+  "cookingtime": 100
+}

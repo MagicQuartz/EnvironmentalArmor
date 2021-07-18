@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.magicquartz.environmentalarmor.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "LivingEntityMixin",
+    "PlayerEntityMixin",
+    "BrewingRecipeRegistryMixin",
+    "BrewingRecipeRegistryAccessor",
+    "FirstApril"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

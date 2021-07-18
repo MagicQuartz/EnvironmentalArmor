@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "enva:titanium_block"
+    }
+  ],
+  "result": {
+    "item": "enva:titanium_ingot",
+    "count": 9
+  }
+}

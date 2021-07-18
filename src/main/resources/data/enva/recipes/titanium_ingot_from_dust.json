@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enva:titanium_dust"
+    }
+  },
+  "result": {
+    "item": "enva:titanium_ingot",
+    "count": 1
+  }
+}

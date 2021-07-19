@@ -1,0 +1,31 @@
+{
+  "type": "origins:prevent_sleep",
+  "block_condition": {
+    "type": "origins:height",
+    "comparison": "<",
+    "compare_to": 86
+  },
+  "condition": {
+    "type": "origins:block_in_radius",
+    "block_condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:block",
+          "block": "enva:air_filter"
+        },
+        {
+          "type": "origins:block_state",
+          "property": "lit",
+          "value": "true"
+        }
+      ]
+    },
+    "radius": 5,
+    "shape": "cube",
+    "comparison": ">=",
+    "compare_to": 1,
+    "inverted": true
+  },
+  "message": "origins.avian_sleep_fail"
+}

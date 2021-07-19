@@ -26,8 +26,9 @@ public class ModBlocks {
             .sounds(BlockSoundGroup.METAL));
 
     public static final Block AIR_FILTER = new AirFilterBlock(FabricBlockSettings
-            .of(Material.PISTON)
+            .of(Material.STONE)
             .breakByHand(true)
+            .strength(1.5f, 0.5f)
             .sounds(BlockSoundGroup.STONE));
 
     public static void register() {

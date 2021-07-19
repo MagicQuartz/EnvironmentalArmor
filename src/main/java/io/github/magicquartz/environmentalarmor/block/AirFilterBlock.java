@@ -44,7 +44,6 @@ public class AirFilterBlock extends Block {
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if ((Boolean)state.get(LIT) && !world.isReceivingRedstonePower(pos)) {
             world.setBlockState(pos, (BlockState)state.cycle(LIT), 2);
-            System.out.println("Redstone is turned off for BlockPos" + pos.toString());
         }
 
     }

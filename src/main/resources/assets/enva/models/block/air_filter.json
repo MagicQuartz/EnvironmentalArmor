@@ -1,8 +1,9 @@
 {
   "credit": "Made with Blockbench",
   "textures": {
-    "0": "enva:block/air_filter_sides",
-    "1": "enva:block/air_filter_top"
+    "0": "enva:blocks/air_filter_sides",
+    "1": "enva:blocks/air_filter_top",
+    "particle": "enva:blocks/air_filter_sides"
   },
   "elements": [
     {

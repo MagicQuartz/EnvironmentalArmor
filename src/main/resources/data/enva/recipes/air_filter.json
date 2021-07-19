@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#P#",
+    "#F#",
+    "#R#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cobblestone"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "enva:air_filter",
+    "count": 1
+  }
+}

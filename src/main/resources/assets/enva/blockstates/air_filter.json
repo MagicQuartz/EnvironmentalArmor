@@ -4,7 +4,7 @@
       "model": "enva:block/air_filter"
     },
     "lit=true": {
-      "model": "enva:block/air_filter"
+      "model": "enva:block/air_filter_lit"
     }
   }
 }

@@ -28,6 +28,6 @@
   "item.enva.titanium_coated_glasses": "Titanium Coated Ender Glasses",
   "block.enva.air_filter": "Air Filter",
 
-  "death.attack.natural_causes": "%1$s died out of natural causes.",
-  "death.attack.natural_causes.player": "%1$s died out of natural causes while fighting %2$s."
+  "death.attack.natural_causes": "%1$s died due to natural causes.",
+  "death.attack.natural_causes.player": "%1$s died due to natural causes while fighting %2$s."
 }

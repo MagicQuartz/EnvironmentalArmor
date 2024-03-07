@@ -1,5 +1,6 @@
 package io.github.magicquartz.environmentalarmor.mixin;
 
+import io.github.apace100.origins.Origins;
 import io.github.magicquartz.environmentalarmor.extensions.CustomDamageSource;
 import io.github.magicquartz.environmentalarmor.power.EnvironmentalArmorPowers;
 import net.minecraft.entity.EntityType;
@@ -30,13 +31,13 @@ public abstract class FirstApril extends LivingEntity {
 
     @Inject(at = @At("HEAD"), method = "attack")
     private void attack(CallbackInfo info) { // For bees.
-        if(EnvironmentalArmorPowers.STINGER.isActive(this)) {
+        /*if(EnvironmentalArmorPowers.STINGER.isActive(this)) {
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd");
             LocalDateTime now = LocalDateTime.now();
             if(dtf.format(now).equals("04/01")) {
                 DamageSource naturalCauses = new CustomDamageSource("natural_causes");
                 damage(naturalCauses, getHealth());
             }
-        }
+        }*/
     }
 }

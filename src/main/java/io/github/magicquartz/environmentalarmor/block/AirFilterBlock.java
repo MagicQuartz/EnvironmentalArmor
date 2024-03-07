@@ -1,8 +1,6 @@
 package io.github.magicquartz.environmentalarmor.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.RedstoneTorchBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
@@ -14,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class AirFilterBlock extends Block {
+public class AirFilterBlock extends RedstoneLampBlock {
     public static final BooleanProperty LIT;
 
     public AirFilterBlock(Settings settings) {
@@ -27,12 +25,12 @@ public class AirFilterBlock extends Block {
         return (BlockState)this.getDefaultState().with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()));
     }
 
-    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos fromPos, boolean notify) {
+    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
         if (!world.isClient) {
             boolean bl = (Boolean)state.get(LIT);
             if (bl != world.isReceivingRedstonePower(pos)) {
                 if (bl) {
-                    world.getBlockTickScheduler().schedule(pos, this, 4);
+                    world.scheduleBlockTick(pos, this, 4);
                 } else {
                     world.setBlockState(pos, (BlockState)state.cycle(LIT), 2);
                 }
@@ -55,4 +53,5 @@ public class AirFilterBlock extends Block {
     static {
         LIT = RedstoneTorchBlock.LIT;
     }
+
 }

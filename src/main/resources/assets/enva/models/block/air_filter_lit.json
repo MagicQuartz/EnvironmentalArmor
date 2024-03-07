@@ -2,7 +2,7 @@
   "credit": "Made with Blockbench",
   "textures": {
     "0": "enva:block/air_filter_sides",
-    "1": "enva:block/air_filter_top",
+    "1": "enva:block/air_filter_top_lit",
     "particle": "enva:block/air_filter_sides"
   },
   "elements": [

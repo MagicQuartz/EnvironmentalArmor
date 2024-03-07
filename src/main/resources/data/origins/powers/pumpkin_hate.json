@@ -1,4 +1,5 @@
 {
+  "loading_priority": 10,
   "type": "origins:multiple",
   "prevent_eating": {
     "type": "origins:prevent_item_use",

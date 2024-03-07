@@ -1,11 +1,11 @@
 package io.github.magicquartz.environmentalarmor.extensions;
 
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectType;
+import net.minecraft.entity.effect.StatusEffectCategory;
 
 public class WaterResistance extends StatusEffect {
     public WaterResistance() {
-        super(StatusEffectType.BENEFICIAL, 0x00BBFF);
+        super(StatusEffectCategory.BENEFICIAL, 0x00BBFF);
     }
 
     @Override

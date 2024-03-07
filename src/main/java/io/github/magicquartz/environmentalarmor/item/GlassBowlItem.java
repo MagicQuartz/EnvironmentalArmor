@@ -27,7 +27,7 @@ public class GlassBowlItem extends Item {
         if(blockHit.getType().equals(HitResult.Type.BLOCK)) {
             BlockPos blockPos = blockHit.getBlockPos();
             BlockState blockState = world.getBlockState(blockPos);
-            if(blockState.getMaterial().equals(Material.WATER)) {
+            if(blockState.getBlock().equals(Blocks.WATER)) {
                 playerEntity.playSound(SoundEvents.ITEM_BUCKET_FILL, 1.0F, 1.0F);
                 world.setBlockState(blockPos, Blocks.AIR.getDefaultState());
                 return new TypedActionResult<>(ActionResult.SUCCESS,  new ItemStack(ModArmor.WATER_GLASS_BOWL, 1));

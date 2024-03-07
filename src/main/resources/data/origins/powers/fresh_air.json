@@ -1,4 +1,5 @@
 {
+  "loading_priority": 10,
   "type": "origins:prevent_sleep",
   "block_condition": {
     "type": "origins:height",

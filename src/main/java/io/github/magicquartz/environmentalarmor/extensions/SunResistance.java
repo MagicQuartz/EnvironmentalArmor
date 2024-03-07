@@ -1,11 +1,11 @@
 package io.github.magicquartz.environmentalarmor.extensions;
 
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectType;
+import net.minecraft.entity.effect.StatusEffectCategory;
 
 public class SunResistance extends StatusEffect {
     public SunResistance() {
-        super(StatusEffectType.BENEFICIAL, 0xFFE659);
+        super(StatusEffectCategory.BENEFICIAL, 0xFFE659);
     }
 
     @Override

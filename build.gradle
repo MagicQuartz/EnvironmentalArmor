@@ -12,18 +12,31 @@ group = project.maven_group
 
 repositories {
 	mavenCentral()
-	maven {
-		name = "Modrinth"
-		url = "https://api.modrinth.com/maven"
-	}
+	exclusiveContent {
 
-	maven {
-		url = "https://maven.quiltmc.org/repository/release/"
-	}
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
 
+		filter {
+			includeGroup "maven.modrinth"
+		}
+
+	}
 	maven {
-		name = "Ladysnake Libs"
+		name = "QuiltMC"
+		url = "https://maven.quiltmc.org/repository/release"
+	}
+	maven {
+		name = 'Ladysnake Mods'
 		url = 'https://maven.ladysnake.org/releases'
+	}
+	maven {
+		name = 'Ladysnake Mods (snapshots)'
+		url = 'https://maven.ladysnake.org/snapshots'
 	}
 	maven {
 		url = 'https://maven.cafeteria.dev'
@@ -36,6 +49,9 @@ repositories {
 		content {
 			includeGroup "com.jamieswhiteshirt"
 		}
+	}
+	maven {
+		url "https://masa.dy.fi/maven"
 	}
 	maven {
 		url "https://jitpack.io"
@@ -61,7 +77,8 @@ dependencies {
 	// You may need to force-disable transitiveness on them.
 	
 	//Origins Mod.
-	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
+	modImplementation "io.github.apace100:origins-fabric:${project.origins_version}"
+	//implementation "io.github.apace100:origins-fabric:${project.origins_version}"
 }
 
 processResources {

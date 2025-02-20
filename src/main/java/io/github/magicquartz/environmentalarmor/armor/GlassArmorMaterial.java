@@ -8,6 +8,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
+
 public class GlassArmorMaterial implements ArmorMaterial {
 
     @Override

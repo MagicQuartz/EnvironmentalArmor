@@ -2,7 +2,7 @@ package io.github.magicquartz.environmentalarmor;
 
 import io.github.magicquartz.environmentalarmor.registry.*;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api
+import net.fabricmc.fabric.api.*;
 import net.minecraft.util.Identifier;
 
 public class Main implements ModInitializer {
@@ -19,6 +19,6 @@ public class Main implements ModInitializer {
     }
 
     public static Identifier identifier(String id) {
-        return new Identifier(MOD_ID, id);
+        return Identifier.of(MOD_ID, id);
     }
 }

@@ -15,6 +15,7 @@ import net.minecraft.util.Rarity;
 
 public class ModArmor {
     public static final Item GLASS_HELMET = new ArmorItem(new GlassArmorMaterial(), ArmorItem.Type.HELMET, new FabricItemSettings());
+
     public static final Item WATER_GLASS_BOWL = new ArmorItem(new WaterGlassArmorMaterial(), ArmorItem.Type.HELMET, new FabricItemSettings());
     public static final Item GLASSES = new ArmorItem(new GlassesArmorMaterial(), ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.COMMON));
 

@@ -1,0 +1,4 @@
+# Exclude build files from repo
+.gradle/
+.idea/
+build/loom-cache/

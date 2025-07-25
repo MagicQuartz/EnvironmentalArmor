@@ -12,13 +12,13 @@ import net.minecraft.registry.entry.RegistryEntry;
 
 public class ModEffects {
 
-    public static final RegistryEntry<StatusEffect> WATER_RESISTANCE;
-    public static final RegistryEntry<Potion> WATER_RESISTANCE_POTION_SHORT;
-    public static final RegistryEntry<Potion> WATER_RESISTANCE_POTION_LONG;
+    public static RegistryEntry<StatusEffect> WATER_RESISTANCE;
+    public static RegistryEntry<Potion> WATER_RESISTANCE_POTION_SHORT;
+    public static RegistryEntry<Potion> WATER_RESISTANCE_POTION_LONG;
 
-    public static final RegistryEntry<StatusEffect> SUNSCREEN;
+    public static RegistryEntry<StatusEffect> SUNSCREEN;
 
-    static {
+    public static void register() {
         WATER_RESISTANCE = Registry.registerReference(Registries.STATUS_EFFECT, Main.identifier("water_resistance"), new WaterResistance());
         WATER_RESISTANCE_POTION_SHORT = Registry.registerReference(Registries.POTION, Main.identifier("water_resist_potion_short"), new Potion("water_resistance_short", new StatusEffectInstance(WATER_RESISTANCE, 3600, 0)));
         WATER_RESISTANCE_POTION_LONG = Registry.registerReference(Registries.POTION, Main.identifier("water_resist_potion_long"), new Potion("water_resistance_long", new StatusEffectInstance(WATER_RESISTANCE, 9600, 0)));

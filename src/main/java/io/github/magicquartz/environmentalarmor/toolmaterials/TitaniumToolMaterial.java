@@ -1,8 +1,11 @@
 package io.github.magicquartz.environmentalarmor.toolmaterials;
 
 import io.github.magicquartz.environmentalarmor.registry.ModItems;
+import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 
 public class TitaniumToolMaterial implements ToolMaterial {
     @Override
@@ -21,8 +24,9 @@ public class TitaniumToolMaterial implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        return 0;
+    public TagKey<Block> getInverseTag() {
+        // TODO: Test to see if this is correct
+        return BlockTags.INCORRECT_FOR_WOODEN_TOOL;
     }
 
     @Override

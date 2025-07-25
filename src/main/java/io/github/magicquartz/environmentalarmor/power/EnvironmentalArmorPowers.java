@@ -1,7 +1,7 @@
 package io.github.magicquartz.environmentalarmor.power;
 
 import io.github.apace100.origins.Origins;
-import io.github.apace100.origins.power.OriginsPowerTypes;
+import io.github.apace100.origins.power.type.OriginsPowerTypes;
 import net.minecraft.util.Identifier;
 
 public class EnvironmentalArmorPowers {

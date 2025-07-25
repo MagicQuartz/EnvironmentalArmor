@@ -18,7 +18,7 @@
         {
           "type": "origins:block_state",
           "property": "lit",
-          "value": "true"
+          "value": true
         }
       ]
     },
@@ -28,5 +28,7 @@
     "compare_to": 1,
     "inverted": true
   },
-  "message": "origins.avian_sleep_fail"
+  "message": {
+    "translate": "origins.avian_sleep_fail"
+  }
 }

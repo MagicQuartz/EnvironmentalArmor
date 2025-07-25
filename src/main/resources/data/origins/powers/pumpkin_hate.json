@@ -4,29 +4,29 @@
   "prevent_eating": {
     "type": "origins:prevent_item_use",
     "item_condition": {
-	  "type": "origins:all_of",
-	  "conditions": [
+      "type": "origins:all_of",
+      "conditions": [
         {
           "type": "origins:food"
-		},
-		{
-		  "type": "origins:ingredient",
+        },
+        {
+          "type": "origins:ingredient",
           "ingredient": {
             "tag": "*:pumpkin_like/food"
           }
-		}
-	  ]
+        }
+      ]
     },
-	"name": {
-	  "translate": "power.origins.pumpkin_hate.name"
-	}
+    "name": {
+      "translate": "power.origins.pumpkin_hate.name"
+    }
   },
   "prevent_seeing": {
     "type": "origins:prevent_entity_render",
-	"bientity_condition": {
+    "bientity_condition": {
       "type": "apoli:equal",
-	  "inverted": true
-	},
+      "inverted": true
+    },
     "entity_condition": {
       "type": "origins:equipped_item",
       "equipment_slot": "head",

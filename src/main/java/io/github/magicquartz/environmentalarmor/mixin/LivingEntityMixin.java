@@ -9,6 +9,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Final;
@@ -25,7 +26,7 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect);
 
-    @Shadow public abstract boolean hasStatusEffect(StatusEffect effect);
+    @Shadow public abstract boolean hasStatusEffect(RegistryEntry<StatusEffect> effect);
 
     @Shadow public abstract ItemStack getEquippedStack(EquipmentSlot slot);
 

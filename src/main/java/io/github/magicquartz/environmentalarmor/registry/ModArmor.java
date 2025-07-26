@@ -1,33 +1,30 @@
 package io.github.magicquartz.environmentalarmor.registry;
 
-import io.github.magicquartz.environmentalarmor.armor.*;
+import io.github.magicquartz.environmentalarmor.armor.Materials;
 import io.github.magicquartz.environmentalarmor.Main;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Rarity;
 
 public class ModArmor {
-    public static final Item GLASS_HELMET = new ArmorItem(new GlassArmorMaterial(), ArmorItem.Type.HELMET, new FabricItemSettings());
+    public static final Item GLASS_HELMET = new ArmorItem(Materials.GLASS, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(5)));
 
-    public static final Item WATER_GLASS_BOWL = new ArmorItem(new WaterGlassArmorMaterial(), ArmorItem.Type.HELMET, new FabricItemSettings());
-    public static final Item GLASSES = new ArmorItem(new GlassesArmorMaterial(), ArmorItem.Type.HELMET, new FabricItemSettings().rarity(Rarity.COMMON));
+    public static final Item WATER_GLASS_BOWL = new ArmorItem(Materials.WATER_GLASS, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(5)));
+    public static final Item GLASSES = new ArmorItem(Materials.GLASSES, ArmorItem.Type.HELMET, new Item.Settings().rarity(Rarity.COMMON).maxDamage(ArmorItem.Type.HELMET.getMaxDamage(5)));
 
     //Titanium Coated
-    public static final Item TITANIUM_COATED_GLASS_HELMET = new ArmorItem(new TitaniumCoatedArmorMaterial(), ArmorItem.Type.HELMET, new FabricItemSettings());
-    public static final Item TITANIUM_COATED_WATER_GLASS_BOWL = new ArmorItem(new TitaniumCoatedArmorMaterial(), ArmorItem.Type.HELMET, new FabricItemSettings());
+    public static final Item TITANIUM_COATED_GLASS_HELMET = new ArmorItem(Materials.TITANIUM_COATED, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(165)));
+    public static final Item TITANIUM_COATED_WATER_GLASS_BOWL = new ArmorItem(Materials.TITANIUM_COATED, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(165)));
 
     // Titanium armor
-    public static final Item TITANIUM_HELMET = new ArmorItem(new TitaniumArmorMaterial(), ArmorItem.Type.HELMET, new FabricItemSettings());
-    public static final Item TITANIUM_CHESTPLATE = new ArmorItem(new TitaniumArmorMaterial(), ArmorItem.Type.CHESTPLATE, new FabricItemSettings());
-    public static final Item TITANIUM_LEGGINGS = new ArmorItem(new TitaniumArmorMaterial(), ArmorItem.Type.LEGGINGS, new FabricItemSettings());
-    public static final Item TITANIUM_BOOTS = new ArmorItem(new TitaniumArmorMaterial(), ArmorItem.Type.BOOTS, new FabricItemSettings());
+    public static final Item TITANIUM_HELMET = new ArmorItem(Materials.TITANIUM, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(30)));
+    public static final Item TITANIUM_CHESTPLATE = new ArmorItem(Materials.TITANIUM, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(30)));
+    public static final Item TITANIUM_LEGGINGS = new ArmorItem(Materials.TITANIUM, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(30)));
+    public static final Item TITANIUM_BOOTS = new ArmorItem(Materials.TITANIUM, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(30)));
 
     public static void register() {
         Registry.register(Registries.ITEM, Main.identifier("glass_helmet"), GLASS_HELMET);

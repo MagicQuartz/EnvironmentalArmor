@@ -2,7 +2,6 @@ package io.github.magicquartz.environmentalarmor;
 
 import io.github.magicquartz.environmentalarmor.registry.*;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.*;
 import net.minecraft.util.Identifier;
 
 public class Main implements ModInitializer {

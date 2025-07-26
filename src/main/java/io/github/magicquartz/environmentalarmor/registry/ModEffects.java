@@ -8,19 +8,20 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 
 public class ModEffects {
 
-    public static final StatusEffect WATER_RESISTANCE = new WaterResistance();
-    public static final Potion WATER_RESISTANCE_POTION_SHORT = new Potion("water_resistance_short", new StatusEffectInstance(WATER_RESISTANCE, 3600, 0));
-    public static final Potion WATER_RESISTANCE_POTION_LONG = new Potion("water_resistance_long", new StatusEffectInstance(WATER_RESISTANCE, 9600, 0));
+    public static RegistryEntry<StatusEffect> WATER_RESISTANCE;
+    public static RegistryEntry<Potion> WATER_RESISTANCE_POTION_SHORT;
+    public static RegistryEntry<Potion> WATER_RESISTANCE_POTION_LONG;
 
-    public static final StatusEffect SUNSCREEN = new SunResistance();
+    public static RegistryEntry<StatusEffect> SUNSCREEN;
 
     public static void register() {
-        Registry.register(Registries.STATUS_EFFECT, Main.identifier("water_resistance"), WATER_RESISTANCE);
-        Registry.register(Registries.POTION, Main.identifier("water_resist_potion_short"), WATER_RESISTANCE_POTION_SHORT);
-        Registry.register(Registries.POTION, Main.identifier("water_resist_potion_long"), WATER_RESISTANCE_POTION_LONG);
-        Registry.register(Registries.STATUS_EFFECT, Main.identifier("sunscreen"), SUNSCREEN);
+        WATER_RESISTANCE = Registry.registerReference(Registries.STATUS_EFFECT, Main.identifier("water_resistance"), new WaterResistance());
+        WATER_RESISTANCE_POTION_SHORT = Registry.registerReference(Registries.POTION, Main.identifier("water_resist_potion_short"), new Potion("water_resistance_short", new StatusEffectInstance(WATER_RESISTANCE, 3600, 0)));
+        WATER_RESISTANCE_POTION_LONG = Registry.registerReference(Registries.POTION, Main.identifier("water_resist_potion_long"), new Potion("water_resistance_long", new StatusEffectInstance(WATER_RESISTANCE, 9600, 0)));
+        SUNSCREEN = Registry.registerReference(Registries.STATUS_EFFECT, Main.identifier("sunscreen"), new SunResistance());
     }
 }

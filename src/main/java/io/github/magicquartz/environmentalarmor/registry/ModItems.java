@@ -5,7 +5,6 @@ import io.github.magicquartz.environmentalarmor.Main;
 import io.github.magicquartz.environmentalarmor.item.SunscreenItem;
 import io.github.magicquartz.environmentalarmor.item.TitaniumCoatedGlassBowlItem;
 import io.github.magicquartz.environmentalarmor.toolmaterials.TitaniumToolMaterial;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -20,9 +19,9 @@ public class ModItems {
     // Titanium
     public static final Item TITANIUM_INGOT = new Item(new Item.Settings());
     public static final Item TITANIUM_DUST = new Item(new Item.Settings());
-    public static final BlockItem TITANIUM_ORE = new BlockItem(ModBlocks.TITANIUM_ORE, new FabricItemSettings());
-    public static final BlockItem TITANIUM_BLOCK = new BlockItem(ModBlocks.TITANIUM_BLOCK, new FabricItemSettings());
-    public static final BlockItem AIR_FILTER = new BlockItem(ModBlocks.AIR_FILTER, new FabricItemSettings());
+    public static final BlockItem TITANIUM_ORE = new BlockItem(ModBlocks.TITANIUM_ORE, new Item.Settings());
+    public static final BlockItem TITANIUM_BLOCK = new BlockItem(ModBlocks.TITANIUM_BLOCK, new Item.Settings());
+    public static final BlockItem AIR_FILTER = new BlockItem(ModBlocks.AIR_FILTER, new Item.Settings());
 
     //Sunscreen
     public static final ToolItem SUNSCREEN = new SunscreenItem(new TitaniumToolMaterial(), new Item.Settings().maxCount(1).maxDamage(3));

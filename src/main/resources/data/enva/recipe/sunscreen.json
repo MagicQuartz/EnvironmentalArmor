@@ -20,7 +20,7 @@
     }
   },
   "result": {
-    "item": "enva:sunscreen",
+    "id": "enva:sunscreen",
     "count": 1
   }
 }

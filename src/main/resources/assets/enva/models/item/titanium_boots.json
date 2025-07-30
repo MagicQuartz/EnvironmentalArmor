@@ -8,6 +8,12 @@
       }
     },
     {
+      "model": "enva:item/titanium_boots_iron_trim",
+      "predicate": {
+        "trim_type": 0.2
+      }
+    },
+    {
       "model": "enva:item/titanium_boots_netherite_trim",
       "predicate": {
         "trim_type": 0.3

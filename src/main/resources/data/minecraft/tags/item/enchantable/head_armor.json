@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "enva:glass_helmet",
+    "enva:water_glass_bowl",
+    "enva:glasses",
+    "enva:titanium_coated_glass_helmet",
+    "enva:titanium_coated_water_glass_bowl"
+  ]
+}

@@ -1,6 +1,7 @@
 package io.github.magicquartz.environmentalarmor.mixin;
 
 import io.github.magicquartz.environmentalarmor.registry.ModEffects;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.recipe.BrewingRecipeRegistry;
@@ -14,7 +15,9 @@ public class BrewingRecipeRegistryMixin {
 
     @Inject(method = "registerDefaults", at = @At("HEAD"))
     private static void addPotionRecipes(BrewingRecipeRegistry.Builder builder, CallbackInfo ci) {
-        builder.registerPotionRecipe(Potions.AWKWARD, Items.TURTLE_SCUTE, ModEffects.WATER_RESISTANCE_POTION_SHORT);
-        builder.registerPotionRecipe(ModEffects.WATER_RESISTANCE_POTION_SHORT, Items.REDSTONE, ModEffects.WATER_RESISTANCE_POTION_LONG);
+        if(!FabricLoader.getInstance().isModLoaded("hwr")) {
+            builder.registerPotionRecipe(Potions.AWKWARD, Items.TURTLE_SCUTE, ModEffects.WATER_RESISTANCE_POTION_SHORT);
+            builder.registerPotionRecipe(ModEffects.WATER_RESISTANCE_POTION_SHORT, Items.REDSTONE, ModEffects.WATER_RESISTANCE_POTION_LONG);
+        }
     }
 }

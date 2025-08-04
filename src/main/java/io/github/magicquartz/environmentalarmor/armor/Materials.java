@@ -38,7 +38,7 @@ public class Materials {
 			map.put(ArmorItem.Type.CHESTPLATE, 1);
 			map.put(ArmorItem.Type.HELMET, 1);
 			map.put(ArmorItem.Type.BODY, 1);
-		}), 0, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, () -> Ingredient.ofItems(Items.GLASS), List.of(new ArmorMaterial.Layer(Main.identifier("water_glass"))), 1, 2));
+		}), 0, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, () -> Ingredient.ofItems(Items.GLASS), List.of(new ArmorMaterial.Layer(Main.identifier("water_glass"))), 1, 0));
 		GLASSES = Registry.registerReference(Registries.ARMOR_MATERIAL, Main.identifier("glasses"), new ArmorMaterial(Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
 			map.put(ArmorItem.Type.BOOTS, 1);
 			map.put(ArmorItem.Type.LEGGINGS, 1);
@@ -52,7 +52,7 @@ public class Materials {
 			map.put(ArmorItem.Type.CHESTPLATE, 5);
 			map.put(ArmorItem.Type.HELMET, 2);
 			map.put(ArmorItem.Type.BODY, 4);
-		}), 10, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT), List.of(new ArmorMaterial.Layer(Main.identifier("titanium"))), 4F, 0.5F));
+		}), 10, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT), List.of(new ArmorMaterial.Layer(Main.identifier("titanium"))), 4F, 0.25F));
 		TITANIUM_COATED_GLASS = Registry.registerReference(Registries.ARMOR_MATERIAL, Main.identifier("titanium_coated_glass"), new ArmorMaterial(Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
 			map.put(ArmorItem.Type.BOOTS, 2);
 			map.put(ArmorItem.Type.LEGGINGS, 2);

@@ -21,7 +21,8 @@ public class Materials {
 	public static final RegistryEntry<ArmorMaterial> WATER_GLASS;
 	public static final RegistryEntry<ArmorMaterial> GLASSES;
 	public static final RegistryEntry<ArmorMaterial> TITANIUM;
-	public static final RegistryEntry<ArmorMaterial> TITANIUM_COATED;
+	public static final RegistryEntry<ArmorMaterial> TITANIUM_COATED_GLASS;
+	public static final RegistryEntry<ArmorMaterial> TITANIUM_COATED_WATER_GLASS;
 	
 	static {
 		GLASS = Registry.registerReference(Registries.ARMOR_MATERIAL, Main.identifier("glass"), new ArmorMaterial(Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
@@ -52,12 +53,19 @@ public class Materials {
 			map.put(ArmorItem.Type.HELMET, 2);
 			map.put(ArmorItem.Type.BODY, 4);
 		}), 10, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT), List.of(new ArmorMaterial.Layer(Main.identifier("titanium"))), 4F, 0.5F));
-		TITANIUM_COATED = Registry.registerReference(Registries.ARMOR_MATERIAL, Main.identifier("titanium_coated_glass"), new ArmorMaterial(Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+		TITANIUM_COATED_GLASS = Registry.registerReference(Registries.ARMOR_MATERIAL, Main.identifier("titanium_coated_glass"), new ArmorMaterial(Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
 			map.put(ArmorItem.Type.BOOTS, 2);
 			map.put(ArmorItem.Type.LEGGINGS, 2);
 			map.put(ArmorItem.Type.CHESTPLATE, 2);
 			map.put(ArmorItem.Type.HELMET, 2);
 			map.put(ArmorItem.Type.BODY, 2);
 		}), 0, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT), List.of(new ArmorMaterial.Layer(Main.identifier("titanium_coated_glass"))), 1, 0));
+		TITANIUM_COATED_WATER_GLASS = Registry.registerReference(Registries.ARMOR_MATERIAL, Main.identifier("titanium_coated_water_glass"), new ArmorMaterial(Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+			map.put(ArmorItem.Type.BOOTS, 2);
+			map.put(ArmorItem.Type.LEGGINGS, 2);
+			map.put(ArmorItem.Type.CHESTPLATE, 2);
+			map.put(ArmorItem.Type.HELMET, 2);
+			map.put(ArmorItem.Type.BODY, 2);
+		}), 0, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, () -> Ingredient.ofItems(ModItems.TITANIUM_INGOT), List.of(new ArmorMaterial.Layer(Main.identifier("titanium_coated_water_glass"))), 1, 0));
 	}
 }

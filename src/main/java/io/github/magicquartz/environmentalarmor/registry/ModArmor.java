@@ -17,8 +17,8 @@ public class ModArmor {
     public static final Item GLASSES = new ArmorItem(Materials.GLASSES, ArmorItem.Type.HELMET, new Item.Settings().rarity(Rarity.COMMON).maxDamage(ArmorItem.Type.HELMET.getMaxDamage(5)));
 
     //Titanium Coated
-    public static final Item TITANIUM_COATED_GLASS_HELMET = new ArmorItem(Materials.TITANIUM_COATED_GLASS, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(165)));
-    public static final Item TITANIUM_COATED_WATER_GLASS_BOWL = new ArmorItem(Materials.TITANIUM_COATED_WATER_GLASS, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(165)));
+    public static final Item TITANIUM_COATED_GLASS_HELMET = new ArmorItem(Materials.TITANIUM_COATED_GLASS, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15)));
+    public static final Item TITANIUM_COATED_WATER_GLASS_BOWL = new ArmorItem(Materials.TITANIUM_COATED_WATER_GLASS, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15)));
 
     // Titanium armor
     public static final Item TITANIUM_HELMET = new ArmorItem(Materials.TITANIUM, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(30)));
